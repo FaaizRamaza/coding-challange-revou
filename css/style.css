@@ -1,0 +1,95 @@
+
+
+body {
+    background-color: #EAF6F6;
+}
+
+.header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+    padding: 16px 24px;
+}
+
+.header-wrapper .menu {
+    display: flex;
+}
+
+.header-wrapper > .logo {
+    width: auto;
+    height: 40px;
+}
+
+.coffe-picture img {
+    width: 100%;
+}
+
+
+.headquarter-content {
+    display: flex;
+    text-align: center;
+}
+
+.headquarter-content img {
+    width: 200px;
+    height: 200px;
+	padding: 5px;
+    border-radius: 50%;
+}
+
+.headquarter-content-jakarta, 
+.headquarter-content-bandung, 
+.headquarter-content-surabaya {
+     width: 33%;
+     
+}
+
+.form-section {
+    padding-right: 10%;
+    display: flex;
+}
+
+.form-output {
+    padding-left: 15%;
+}
+
+
+footer {
+    text-align: right;
+}
+
+
+
+@media (max-width: 600px) {
+
+    .header-wrapper {
+        flex-direction: column;
+    }
+
+    .menu {
+        flex-direction: column;
+        width: 80%;
+    }
+
+    .logo {
+        margin-bottom: 14px;
+    }
+
+    .headquarter-content img {
+        width: 155px;
+        height: 155px;
+    }
+    
+    .form-section {
+        flex-direction: column;
+    }
+
+}
+
+@media (min-width: 1400px) {
+    .headquarter-content img {
+        width: 400px;
+        height: 400px;
+    }
+}

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header class="header-wrapper">
+        <img class="logo" src="css/images/Logo.png" alt="revou-logo">
+        <div class="menu">
+            <button>Home</button>
+            <a href="profile.html"><button>Our Profile</button></a>
+            <button>Portofolio</button>
+            <button>Massage Us</button>
+        </div>
+    </header>
+
+    <div class="top-container">
+        <h3>Hi <span id="welcome-name"></span>, Welcome to our Coffe Website</h3>
+    </div>
+
+    <script>
+        var name = prompt("Input Your Name Here");
+        document.getElementById("welcome-name").innerText = name;
+    </script>
+
+    <div class="coffe-picture">
+        <img src="css/images/foto kopi.jpeg" alt=""> 
+        <br>
+        <br>
+        <hr>
+        
+    </div>
+
+    <div id="headerquarter">
+        <div class="headquarter-title">
+            <h3>Our Headquarter</h3>
+        </div>
+        <div class="headquarter-content">
+            <div class="headquarter-content-jakarta">
+                <img src="css/images/jakarta.jpg" alt="jakarta-picture">
+                <p>Jakarta</p>
+            </div>
+            <div class="headquarter-content-bandung">
+                <img src="css/images/bandung.jpg" alt="bandung-picture">
+                <p>Bandung</p>
+            </div>
+            <div class="headquarter-content-surabaya">
+                <img src="css/images/surabaya.jpg" alt="surabaya-picture">
+                <p>Surabaya</p>
+            </div>
+        </div>
+        <br><hr><br>
+    </div>
+
+    <div id="Massage-Us">
+        <div class="massage-us-title">
+            <h3>Massage Us</h3>
+        </div>
+        <div class="massage-us-content">
+            <div class="form-section">
+                <form name="massage-form" onsubmit="return validateForm()">
+                    Nama: <input type="text" placeholder="Nama" name="full-name" />
+                    <br><br>
+        
+                    Tanggal Lahir:
+                    <input type="date" name="birth-date" />
+                    <br><br>
+        
+                    Jenis Kelamin:
+                    <input type="radio" id="male" name="gender" value="Laki-laki">
+                    <label for="male">Laki-laki</label>
+                    <input type="radio" id="female" name="gender" value="Perempuan">
+                    <label for="male">Perempuan</label>
+                    <br><br>
+        
+                    Pesan:
+                    <textarea placeholder="pesan"name="massage" id="" cols="30" rows="10"></textarea>
+                    <br><br>
+                    <input type="submit" value="submit">
+                </form>
+
+        <script>
+            function validateForm() {
+                var currentTime = new Date();
+                var name = document.forms["massage-form"]["full-name"].value;
+                var date = document.forms["massage-form"]["birth-date"].value;
+                var gender = document.forms["massage-form"]["gender"].value;
+                var massage = document.forms["massage-form"]["massage"].value;
+
+                if ( name =="" || date == "" || gender =="" || massage =="") {
+                    alert("Input tidak boleh kosong");
+                    return false;
+                }
+
+                document.getElementById("sender-current-date").innerText = currentTime ;
+                document.getElementById("sender-full-name").innerText = name ;
+                document.getElementById("sender-birth-date").innerText = date ;
+                document.getElementById("sender-gender").innerText = gender ;
+                document.getElementById("sender-massage").innerText = massage ;
+                return false;
+            }
+        </script>
+
+        <div class="form-output">
+            <div class="form-output-content">
+                <p>Current Time :<span id="sender-current-date"></span></p><br>
+                <p>Nama : <span id="sender-full-name"></span></p>
+                <p>Tanggal Lahir : <span id="sender-birth-date"></span></p>
+                <p>Jenis Kelamin : <span id="sender-gender"></span></p>
+                <p>Pesan : <span id="sender-massage"></span></p>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <br><br><br><br><hr>
+    <footer>
+        <p>Created by Faaiz Ramaza</p>
+    </footer>
+    <hr>
+</body>
+</html>
